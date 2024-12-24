@@ -460,29 +460,125 @@ article .icon {
 /* PROJECTS SECTION */
 
 #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically if needed */
     position: relative;
     text-align: center;
+    padding: 0; /* Remove all padding from the section */
+    gap: 0; /* No vertical gap between elements except specified below */
 }
-  
-  .color-container {
-    border-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
+
+#projects p.section__text__p1 {
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove all padding */
 }
-  
-.project-img {
-    border-radius: 2rem;
-    width: 90%;
-    height: 90%;
+
+#projects .title {
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove all padding */
+    margin-bottom: 1.5rem; /* Add gap between title and the table */
 }
-  
-.project-title {
-    margin: 1rem;
-    color: black;
+
+.projects-table-container {
+    margin: 0 auto; /* Center horizontally */
+    width: 100%; /* Maintain the responsiveness */
+    max-width: 1200px; /* Set a maximum width for the table container */
 }
-  
-.project-btn {
-    color: black;
-    border-color: rgb(163, 163, 163);
+
+.projects-table {
+    width: 100%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.projects-table thead {
+    background-color: #333;
+    color: #fff;
+}
+
+.projects-table th,
+.projects-table td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center; /* Center-align the text */
+    vertical-align: middle; /* Center-align content vertically */
+}
+
+.projects-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.projects-table a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.projects-table a:hover {
+    text-decoration: underline;
+}
+
+/* New styles for Tools section */
+.projects-table .tools {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of tools if they exceed the cell width */
+    justify-content: center; /* Center the tools horizontally */
+    gap: 0.5rem; /* Add space between the tool items */
+}
+
+.projects-table .tools span {
+    display: inline-block;
+    padding: 0.5rem 1rem; /* Add padding for oval shape */
+    border: 1px solid #007BFF; /* Add a blue border */
+    border-radius: 50px; /* Make the shape oval */
+    background-color: #f9f9f9; /* Default light background */
+    color: #333; /* Set text color */
+    font-size: 0.9rem; /* Adjust font size */
+    text-align: center; /* Center text inside the oval */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Dynamic colors for tools */
+.projects-table .tools span:nth-child(1) {
+    background-color: #FF6F61; /* Light red */
+    border-color: #FF6F61;
+    color: #fff; /* Ensure text is visible */
+}
+
+.projects-table .tools span:nth-child(2) {
+    background-color: #6B5B95; /* Purple */
+    border-color: #6B5B95;
+    color: #fff;
+}
+
+.projects-table .tools span:nth-child(3) {
+    background-color: #88B04B; /* Green */
+    border-color: #88B04B;
+    color: #fff;
+}
+
+.projects-table .tools span:nth-child(4) {
+    background-color: #F7CAC9; /* Light pink */
+    border-color: #F7CAC9;
+    color: #fff;
+}
+
+.projects-table .tools span:nth-child(5) {
+    background-color: #92A8D1; /* Light blue */
+    border-color: #92A8D1;
+    color: #fff;
+}
+
+/* Hover effect for tools */
+.projects-table .tools span:hover {
+    filter: brightness(1.1); /* Brighten the color on hover */
+    cursor: pointer; /* Change the cursor to pointer */
 }
   
 /* CONTACT */
