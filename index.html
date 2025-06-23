@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Sanjay Kumar Samala</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Sanjay Kumar Samala</div> 
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <ul>
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#achievements" onclick="toggleMenu()">Achievements</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>   
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section_pic_container">
+            <img src="./assests/profile-pic.png" alt="Sanjay Kumar Samala" class="profile-pic">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Sanjay Kumar Samala</h1>
+            <p class="section__text__p2">Cybersecurity Engineer | Penetration Testing & Forensics</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assests/sanjay kumar samala.pdf')"
+                >Download CV
+            </button>
+            <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                Contact Info
+            </button>
+            </div>
+            <div id="socials-container">
+                <img
+                src="./assests/linkedin.png"
+                alt="My linkedin profile"
+                class="icon"
+                onclick="location.href='https://www.linkedin.com/in/sanjay-kumar-samala/'"
+                />
+                <img
+                src="./assests/github.png"
+                alt="My github profile"
+                class="icon"
+                onclick="location.href='https://github.com/sanjaykumar-samala/'"
+                />
+            </div>
+    </section>
+    <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+        <div class="about-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <img src="./assests/exp.jpeg" alt="Experience icon" class="icon" />
+                    <h3>Experience</h3>
+                    <p>• Graduate Teaching Assistant (GMU) <br />
+                       • Intern at HackersForYou (Penetration Tester)
+                    </p>
+                </div>
+                <div class="details-container">
+                    <img src="./assests/experience.png" alt="Experience icon" class="icon" />
+                    <h3>Certification</h3>
+                    <p>• <a href="https://www.coursera.org/account/accomplishments/professional-cert/IVR6TXW67H9L" target="_blank">Google Cybersecurity - Coursera</a><br />
+                       • <a href="https://certs.ine.com/ef844c6e-ce79-4c67-a2bf-e53eae42a7ea#acc.H6FwC8O9" target="_blank">Junior Penetration Tester (eJPT)</a><br />
+                       • <a href="https://certs.ine.com/f28b5436-a6d2-4af7-9c6d-38b6b3ac7a97#acc.Ma8XoI9Y" target="_blank">Certified Cloud Associate (ICCA)</a><br />
+                       • <a href="https://app.onlinecoursehost.com/certificate-proof/EWCMtAhS9bQgqAhVHuI5wJwrR5r1/YQdCEpJMDMILoe39Nv23/AYT6h9AEHaR65IES9laD2mv8cjw1" target="_blank">Offensive Hacking Unfolded - comproavi</a>
+                    </p>
+                </div>
+                <div class="details-container">
+                    <img src="./assests/education.png" alt="Education icon" class="icon" />
+                    <h3>Education</h3>
+                    <p>• M.S. George Mason University<br />• B.E. Osmania University</p>
+                </div>
+            </div>
+            <div class="text-container">
+                <p class="about-summary">
+  I am a cybersecurity engineer with a focus on offensive security, digital forensics, and adversarial analysis. With hands-on experience in penetration testing, traffic analysis, and reverse engineering, I work with tools such as Nmap, Metasploit, Burp Suite, Wireshark, Hydra, and YARA across academic and lab environments. My work spans CTF competitions, drone-based wireless research, and malware investigations, backed by Python scripting and Linux-based system expertise. I bring a research-driven, attack-focused mindset to every challenge, with a commitment to continuous learning and ethical hacking excellence.
+</p>
+
+            </div>
+        </div>
+    </div>
+    <img src="./assests/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+</section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p> 
+      <h1 class="title">Experience</h1>
+      <div class="experience-grid">
+      <div class="experience-card">
+      <h3>Graduate Teaching Assistant</h3>
+      <p><em>George Mason University | Jan 2024 – Present</em></p>
+      <ul>
+        <li>Explained and demonstrated cybersecurity lab exercises to 50+ students.</li>
+        <li>Conducted hands-on exercises using Burp Suite, Kali Linux, and Metasploit Framework to enhance technical
+ proficiency among 50+ students in cybersecurity lab sessions, fostering interactive learning experiences.</li>
+        <li> Configured SSL/TLS protocols for 5+ websites, ensuring secure data transmission and enhancing user trust while
+ analyzing Zeek logs to identify potential vulnerabilities in secure communication practices.</li>
+        <li> Delivered instruction on the NIST Cybersecurity Framework and Zero Trust Architecture, bridging theoretical
+ concepts with real-world applications in network and IoT security.</li>
+        <li>  Implemented personalized guidance on threat assessment, risk mitigation, and secure coding, improving student
+ performance by 20%.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>Penetration Testing Intern</h3>
+      <p><em>HackersForYou (Remote) | Jun – Aug 2023</em></p>
+      <ul>
+        <li>Executed thorough evaluations of five distinct web applications, pinpointing key vulnerabilities; developed actionable
+ remediation strategies that enhanced system defenses and reduced potential attack vectors across all platforms.</li>
+        <li>Executed penetration testing protocols using advanced tools like Nmap and Metasploit on over 7 web applications
+ within a month; enhanced vulnerability identification process leading to swift remediation actions taken subsequently.</li>
+        <li>Engineered automated security assessment solutions in Python, streamlining workflows and reducing manual effort by
+ approximately 25%, allowing the team to prioritize critical vulnerabilities.</li>
+        <li> Delivered detailed security assessment reports to stakeholders, resulting in a 40% reduction in client-reported vul
+nerabilities.</li>
+        <li> Collaborated with a team of cybersecurity experts to enhance and standardize penetration testing methodologies.</li>
+      </ul>
+    </div>
+    <img
+      src="./assests/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow"
+      onclick="location.href='./#projects'"
+    />
+      </section>
+      <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="projects-table-container">
+            <table class="projects-table">
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Tools</th>
+                        <th>Description</th>
+                        <th>GitHub Link</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Penetration Testing and Root Privilege Escalation on a Boot2Root VM</td>
+                        <td>
+                            <div class="tools">
+                                <span>Linux</span>
+                                <span>Nmap</span>
+                                <span>Metasploit</span>
+                            </div>
+                        </td>
+                        <td>Performed penetration testing on a Boot2Root VM, exploiting remote vulnerabilities and escalating privileges to root. Documented attack vectors and methodologies for knowledge sharing. Gained hands-on experience in vulnerability analysis and exploitation in virtual environments.</td>
+                        <td><a href="https://github.com/SanjuCyb3r/Basic-Pentesting-1" target="_blank">GitHub</a></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Exploiting Multi-Service Vulnerabilities: A Metasploitable 2 Case Study</td>
+                        <td>
+                          <div class="tools">
+                              <span>Nmap</span>
+                              <span>Metasploit Framework (MSF)</span>
+                              <span>SQLmap</span>
+                              <span>Netcat</span>
+                          </div>
+                      </td>
+                        <td>Metasploitable 2 is a purposefully insecure Ubuntu-based virtual machine (hosted on VulnHub) designed for penetration testing practice, featuring vulnerabilities in services like FTP, SSH, web servers, and databases to simulate real-world attack scenarios. It provides hands-on training in using tools like Nmap, Metasploit, and SQLmap for reconnaissance, exploitation (e.g., vsftpd backdoors, UnrealIRCD flaws), and privilege escalation, while emphasizing safe lab isolation and ethical hacking principles.</td>
+                        <td><a href="https://github.com/SanjuCyb3r/Metasploitable-2" target="_blank">GitHub</a></td>
+                       
+                    </tr>
+                    <tr>
+                        <td>Project Three</td>
+                        <td>Flutter, MongoDB</td>
+                        <td>A food delivery app with cloud integration.</td>
+                        <td><a href="https://github.com/" target="_blank">GitHub</a></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <img
+          src="./assests/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#achievements'"
+        />
+    </section>
+    <section id="achievements">
+      <p class="section__text__p1">Some of My</p>
+      <h1 class="title">Achievements</h1>
+      <div class="achievements-container">
+        <div class="achievement-card">
+          <h3>🏆 C2C INCS-COE CTF Finalist 2025</h3>
+          <p>Selected for the final round of the prestigious CTF hosted by India's National Cybersecurity Coordinator Cell.</p>
+        </div>
+        <div class="achievement-card">
+          <h3>📜 eJPT Certified</h3>
+          <p>Earned the eLearnSecurity Junior Penetration Tester certification validating skills in practical network and web app testing.</p>
+        </div>
+        <div class="achievement-card">
+          <h3>☁️ ICCA Certified</h3>
+          <p>Certified Cloud Associate with demonstrated proficiency in core cloud services and security principles.</p>
+        </div>
+        <div class="achievement-card">
+          <h3>👨‍🏫 Graduate Teaching Assistant – GMU</h3>
+          <p>Supported teaching and lab design for undergraduate Cybersecurity courses like CYSE 230 and CYSE 445.</p>
+        </div>
+      </div>
+      <img src="./assests/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+    </section>
+    
+      <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="./assests/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+            />
+            <p><a href="mailto:sanjaykumarsamala2001@gmail.com">Email</a></p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="./assests/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon contact-icon"
+            />
+            <p><a href="https://www.linkedin.com/in/sanjay-kumar-samala/">LinkedIn</a></p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright &#169; 2024 Sanjay Kumar Samala. All Rights Reserved.</p>
+      </footer>
+    <script src="script.js"></script>
+</body>
+</html>
