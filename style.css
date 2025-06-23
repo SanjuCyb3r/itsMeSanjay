@@ -1,0 +1,744 @@
+/* GENERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+    transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+#desktop-nav {
+    display: flex;
+}
+
+
+.logo {
+    font-size: 2rem;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* SECTIONS */
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem; /* Increased gap between image and text */
+    height: 80vh; /* Adjust height to match layout */
+}
+
+#Profile {
+    position: relative;
+    text-align: center;
+}
+
+/*#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+ */ 
+.section_pic_container {
+    width: 400px;   /* Increase width to 300px */
+    height: 400px; /* Ensure height matches width for a perfect circle */
+    border-radius: 50%; /* Make sure image remains circular */
+    overflow: hidden; /* Hide overflow to keep it inside the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.section_pic_container {
+    display: flex;
+    height:400px;
+    width: 400px;
+    border-radius: 50%;
+    margin: auto 0;
+}
+  
+.profile-pic {
+    width: 200%;
+    height: 200%;
+    object-fit: contain; /* Use 'cover' to fill the circle without stretching */
+    border-radius: 50%; /* Ensures the image is circular */
+}
+  
+.section__text {
+    text-align: center; /* Align the text to the left */
+    margin-left: 1rem;
+}
+  
+.title {
+    font-size: 2.5rem; /* Slightly smaller title font size */
+}
+  
+.section__text__p2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    text-align: center;
+    
+}
+  
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: left;
+}
+  
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+  
+  
+
+/*#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+.section_pic_container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    margin: auto 0;
+}
+
+.section__text {
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text__p1 {
+    text-align: center;
+}
+
+.section__text__p2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+*/
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+.btn-color-1:hover {
+    background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+    background: none;
+}
+
+.btn-color-2:hover {
+    border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+    gap: 1rem;
+}
+
+/* ABOUT SECTION */
+
+
+#about {
+    position: relative;
+    text-align: center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.about-pic {
+    width: 300px; /* Adjust the size here to make it larger */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 2rem; /* Keep the corners rounded */
+    object-fit: cover; /* Make sure the image fits well inside the container */
+}
+    
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.section__text__p1 {
+    text-align: center;
+}
+  
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+}
+  
+.about-containers,
+  .about-details-container {
+    display: flex;
+}
+  
+/*.about-pic {
+    border-radius: 2rem;
+}
+*/
+
+.section_pic_container {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    margin-bottom: 2rem; /* Optional: Adds some space below the image */
+}
+  
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+  
+.section-container {
+    gap: 4rem;
+    height: 50%;
+}
+  
+.section_pic_container {
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+
+/* LINK STYLING FOR CERTIFICATIONS */
+.details-container a {
+  color: #007BFF; /* Use your brand accent color (blue here) */
+  text-decoration: none; /* Remove default underline */
+  font-weight: 500;
+}
+
+.details-container a:hover {
+  text-decoration: underline; /* Add subtle underline on hover */
+}
+
+
+/* EXPERIENCE SECTION */
+
+#experience {
+    position: relative;
+    text-align: center;
+}
+  
+.experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+  
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+  
+.article-container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+  
+article {
+    display: flex;
+    width: 10rem;
+    /* justify-content: space-around; */
+    gap: 0.5rem;
+}
+  
+article .icon {
+    cursor: default;
+}
+ #experience {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.experience-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.experience-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 350px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.experience-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.experience-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+.experience-card ul {
+  padding-left: 1rem;
+  list-style-type: disc;
+}
+
+.experience-card ul li {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+
+
+/* PROJECTS SECTION */
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically if needed */
+    position: relative;
+    text-align: center;
+    padding: 0; /* Remove all padding from the section */
+    gap: 0; /* No vertical gap between elements except specified below */
+}
+
+#projects p.section__text__p1 {
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove all padding */
+}
+
+#projects .title {
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove all padding */
+    margin-bottom: 1.5rem; /* Add gap between title and the table */
+}
+
+.projects-table-container {
+    margin: 0 auto; /* Center horizontally */
+    width: 100%; /* Maintain the responsiveness */
+    max-width: 1200px; /* Set a maximum width for the table container */
+}
+
+.projects-table {
+    width: 100%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.projects-table thead {
+    background-color: #333;
+    color: #fff;
+}
+
+.projects-table th,
+.projects-table td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center; /* Center-align the text */
+    vertical-align: middle; /* Center-align content vertically */
+}
+
+.projects-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.projects-table a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.projects-table a:hover {
+    text-decoration: underline;
+}
+
+/* New styles for Tools section */
+.projects-table .tools {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of tools if they exceed the cell width */
+    justify-content: center; /* Center the tools horizontally */
+    gap: 0.5rem; /* Add space between the tool items */
+}
+
+.projects-table .tools span {
+    display: inline-block;
+    padding: 0.5rem 1rem; /* Add padding for oval shape */
+    border: 1px solid #007BFF; /* Add a blue border */
+    border-radius: 50px; /* Make the shape oval */
+    background-color: #f9f9f9; /* Default light background */
+    color: #333; /* Set text color */
+    font-size: 0.9rem; /* Adjust font size */
+    text-align: center; /* Center text inside the oval */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Dynamic colors for tools */
+.projects-table .tools span:nth-child(1) {
+    background-color: #FF6F61; /* Light red */
+    border-color: #FF6F61;
+    color: #fff; /* Ensure text is visible */
+}
+
+.projects-table .tools span:nth-child(2) {
+    background-color: #6B5B95; /* Purple */
+    border-color: #6B5B95;
+    color: #fff;
+}
+
+.projects-table .tools span:nth-child(3) {
+    background-color: #88B04B; /* Green */
+    border-color: #88B04B;
+    color: #fff;
+}
+
+.projects-table .tools span:nth-child(4) {
+    background-color: #F7CAC9; /* Light pink */
+    border-color: #F7CAC9;
+    color: #fff;
+}
+
+.projects-table .tools span:nth-child(5) {
+    background-color: #92A8D1; /* Light blue */
+    border-color: #92A8D1;
+    color: #fff;
+}
+
+/* Hover effect for tools */
+.projects-table .tools span:hover {
+    filter: brightness(1.1); /* Brighten the color on hover */
+    cursor: pointer; /* Change the cursor to pointer */
+}
+
+/* ACHIEVEMENTS SECTION */
+#achievements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 2rem 5%;
+}
+
+.achievements-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1000px;
+}
+
+.achievement-card {
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    flex: 1 1 300px;
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.achievement-card p {
+    font-size: 1rem;
+    color: #666;
+}
+  
+/* CONTACT */
+  
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+#contact {
+    position: relative;
+    text-align: center;
+}
+  
+.contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+  
+.contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+  
+.contact-info-container p {
+    font-size: larger;
+}
+  
+.contact-icon {
+    cursor: default;
+}
+  
+.email-icon {
+    height: 2.5rem;
+}
+  
+ /* FOOTER SECTION */
+  
+footer {
+    height: 26vh;
+    margin: 0 1rem;
+}
+  
+footer p {
+    text-align: center;
+}
