@@ -742,3 +742,43 @@ footer {
 footer p {
     text-align: center;
 }
+
+.education-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  gap: 2rem;
+}
+
+.education-title {
+  flex: 0 0 15%;
+  text-align: center;
+}
+
+.education-details {
+  flex: 1;
+}
+
+.education-details h4 {
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.education-details p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.education-details ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.education-details ul li {
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
