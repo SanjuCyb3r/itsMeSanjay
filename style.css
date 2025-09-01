@@ -783,3 +783,140 @@ footer p {
   margin-bottom: 0.4rem;
   line-height: 1.4;
 }
+
+/* Experience polish */
+#experience .title { margin-bottom: 0.25rem; }
+#experience .section__text__p1 { margin-bottom: 0.5rem; }
+
+.role-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: .75rem;
+}
+.role-head h3 { margin: 0; font-size: 1.15rem; font-weight: 700; }
+.role-meta { margin: .25rem 0 0; font-size: .9rem; color: #666; }
+
+.outcome-badges {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.badge {
+  display: inline-block;
+  padding: .25rem .6rem;
+  border-radius: 999px;
+  font-size: .78rem;
+  line-height: 1;
+  white-space: nowrap;
+  background: #eef1f6;
+  color: #344;
+  border: 1px solid #e2e6ee;
+}
+.badge.success { background:#e8f7ef; border-color:#d7f0e2; color:#106b39; }
+.badge.neutral { background:#eff3ff; border-color:#e1e7ff; color:#1c3d8f; }
+
+.role-bullets { margin: .5rem 0 .75rem 1rem; padding: 0; }
+.role-bullets li { margin: .4rem 0; line-height: 1.45; font-size: .95rem; }
+
+.tool-chips { display: flex; gap: .5rem; flex-wrap: wrap; }
+.chip {
+  display: inline-block;
+  padding: .35rem .65rem;
+  border: 1px solid #d3d9e6;
+  border-radius: 999px;
+  font-size: .78rem;
+  background: #fafbff;
+}
+
+/* Optional: nicer width + responsive grid already in your CSS */
+#experience .experience-grid { max-width: 1100px; margin: 1rem auto 0; }
+@media (max-width: 1024px) {
+  .outcome-badges { justify-content: flex-start; }
+}
+
+/* === Experience layout fixes === */
+
+/* 1) Neutralize the global article rule for Experience only */
+#experience article {
+  display: block !important;
+  width: auto !important;
+}
+
+/* 2) Make the grid clean and consistent */
+#experience .experience-grid {
+  max-width: 1100px;
+  margin: 1rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* 3) Card sizing + polish */
+#experience .experience-card {
+  width: 100% !important;         /* fill its grid column */
+  border-radius: 14px;
+  padding: 1.25rem 1.25rem 1rem;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+
+/* 4) Header + badges alignment */
+#experience .role-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: .75rem;
+}
+#experience .role-head h3 { margin: 0; font-size: 1.15rem; font-weight: 700; }
+#experience .role-meta { margin: .25rem 0 0; font-size: .9rem; color: #666; }
+
+#experience .outcome-badges {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+#experience .badge {
+  display: inline-block;
+  padding: .25rem .6rem;
+  border-radius: 999px;
+  font-size: .78rem;
+  line-height: 1;
+  white-space: nowrap;
+  background: #eef1f6;
+  color: #344;
+  border: 1px solid #e2e6ee;
+}
+#experience .badge.success { background:#e8f7ef; border-color:#d7f0e2; color:#106b39; }
+#experience .badge.neutral { background:#eff3ff; border-color:#e1e7ff; color:#1c3d8f; }
+
+/* 5) Bullets readability */
+#experience .role-bullets { margin: .5rem 0 .75rem 1rem; padding: 0; }
+#experience .role-bullets li { margin: .4rem 0; line-height: 1.45; font-size: .95rem; }
+
+/* 6) Tool chips — keep them below bullets and stop stretching */
+#experience .tool-chips {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  align-content: flex-start;   /* <- prevents tall stretched rows */
+  margin-top: .25rem;
+}
+#experience .chip {
+  display: inline-block;
+  padding: .35rem .65rem;
+  border: 1px solid #d3d9e6;
+  border-radius: 999px;
+  font-size: .78rem;
+  background: #fafbff;
+  line-height: 1.1;
+}
+
+/* 7) Mobile: stack cards and keep badges tidy */
+@media (max-width: 1024px) {
+  #experience .experience-grid { grid-template-columns: 1fr; }
+  #experience .outcome-badges { justify-content: flex-start; }
+}

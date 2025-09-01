@@ -132,47 +132,77 @@
 </section>
 
     <section id="experience">
-      <p class="section__text__p1">Explore My</p> 
-      <h1 class="title">Experience</h1>
-      <div class="experience-grid">
-      <div class="experience-card">
-      <h3>Graduate Teaching Assistant</h3>
-      <p><em>George Mason University | Jan 2024 – Present</em></p>
-      <ul>
-        <li>Explained and demonstrated cybersecurity lab exercises to 50+ students.</li>
-        <li>Conducted hands-on exercises using Burp Suite, Kali Linux, and Metasploit Framework to enhance technical
- proficiency among 50+ students in cybersecurity lab sessions, fostering interactive learning experiences.</li>
-        <li> Configured SSL/TLS protocols for 5+ websites, ensuring secure data transmission and enhancing user trust while
- analyzing Zeek logs to identify potential vulnerabilities in secure communication practices.</li>
-        <li> Delivered instruction on the NIST Cybersecurity Framework and Zero Trust Architecture, bridging theoretical
- concepts with real-world applications in network and IoT security.</li>
-        <li>  Implemented personalized guidance on threat assessment, risk mitigation, and secure coding, improving student
- performance by 20%.</li>
-      </ul>
-    </div>
+  <p class="section__text__p1">Explore My</p>
+  <h1 class="title">Experience</h1>
+  <p class="experience-sub-title">Hands-on offensive security & teaching experience</p>
 
-    <div class="experience-card">
-      <h3>Penetration Testing Intern</h3>
-      <p><em>HackersForYou (Remote) | Jun – Aug 2023</em></p>
-      <ul>
-        <li>Executed thorough evaluations of five distinct web applications, pinpointing key vulnerabilities; developed actionable
- remediation strategies that enhanced system defenses and reduced potential attack vectors across all platforms.</li>
-        <li>Executed penetration testing protocols using advanced tools like Nmap and Metasploit on over 7 web applications
- within a month; enhanced vulnerability identification process leading to swift remediation actions taken subsequently.</li>
-        <li>Engineered automated security assessment solutions in Python, streamlining workflows and reducing manual effort by
- approximately 25%, allowing the team to prioritize critical vulnerabilities.</li>
-        <li> Delivered detailed security assessment reports to stakeholders, resulting in a 40% reduction in client-reported vul
-nerabilities.</li>
-        <li> Collaborated with a team of cybersecurity experts to enhance and standardize penetration testing methodologies.</li>
+  <div class="experience-grid">
+
+    <!-- GTA -->
+    <article class="experience-card">
+      <header class="role-head">
+        <div>
+          <h3>Graduate Teaching Assistant</h3>
+          <p class="role-meta">George Mason University • Jan 2024 – Present</p>
+        </div>
+        <div class="outcome-badges">
+          <span class="badge success">+20% student performance</span>
+          <span class="badge neutral">5+ apps hardened</span>
+        </div>
+      </header>
+
+      <ul class="role-bullets">
+        <li>Led 250+ students through OSI, packet-switching, and congestion-control labs, measurably improving concept retention.</li>
+        <li>Ran hands-on offensive-security labs (Burp, Kali, Metasploit), boosting technical proficiency and adversarial thinking by ~20%.</li>
+        <li>Engineered secure SSL/TLS setups for 5+ web apps; used Zeek and Splunk to detect and harden weak encrypted traffic paths.</li>
+        <li>Taught and applied NIST CSF and Zero Trust principles, elevating secure-coding and risk-aware decision making across courses.</li>
+        <li>Mentored students 1:1 on threat assessment, mitigation, and secure coding, and refined lab materials to standardize outcomes.</li>
       </ul>
-    </div>
-    <img
-      src="./assests/arrow.png"
-      alt="Arrow icon"
-      class="icon arrow"
-      onclick="location.href='./#projects'"
-    />
-      </section>
+
+      <div class="tool-chips">
+        <span class="chip">Burp Suite</span><span class="chip">Metasploit</span>
+        <span class="chip">Kali</span><span class="chip">Zeek</span><span class="chip">Splunk</span>
+      </div>
+    </article>
+
+    <!-- Pentest Intern -->
+    <article class="experience-card">
+      <header class="role-head">
+        <div>
+          <h3>Penetration Testing Intern</h3>
+          <p class="role-meta">HackersForYou (Remote) • Jun – Aug 2023</p>
+        </div>
+        <div class="outcome-badges">
+          <span class="badge success">–40% client-reported vulns</span>
+          <span class="badge neutral">7+ apps assessed</span>
+        </div>
+      </header>
+
+      <ul class="role-bullets">
+        <li>Assessed 7+ enterprise web apps with Nmap, Burp, Metasploit, uncovering 30+ critical vulnerabilities (incl. priv-esc & buffer overflows).</li>
+        <li>Built Python automations for recon and validation, cutting manual effort by ~25% and speeding triage of high-risk findings.</li>
+        <li>Performed controlled exploitation and post-exploitation to validate impact, contributing to a 40% drop in client-reported vulnerabilities.</li>
+        <li>Delivered reports with CVSS scoring mapped to OWASP Top 10 and MITRE ATT&CK, driving prioritized remediation.</li>
+        <li>Partnered with engineers and analysts to standardize pentest playbooks, improving consistency and fix-cycle velocity.</li>
+      </ul>
+
+      <div class="tool-chips">
+        <span class="chip">Nmap</span><span class="chip">Metasploit</span>
+        <span class="chip">Burp Suite</span><span class="chip">Python</span>
+        <span class="chip">OWASP / MITRE</span>
+      </div>
+    </article>
+
+  </div>
+
+  <img
+    src="./assests/arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="location.href='./#projects'"
+  />
+</section>
+
       <section id="projects">
         <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
