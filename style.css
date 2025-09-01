@@ -353,8 +353,7 @@ section {
     display:flex;
     flex-direction:column;
     justify-content:center;
-    padding-top: 0;   /* remove the 4vh top padding from the global section rule */
-    height: auto; 
+    
 }
 
 .about-pic {
