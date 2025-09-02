@@ -75,21 +75,21 @@
   <h1 class="title">About Me</h1>
 
   <div class="section-container">
-    <div class="about-details-container" style="gap:1.5rem;">
+  <div class="about-details-container" style="gap:1.5rem;">
 
-      <!-- Summary first -->
+    <!-- About summary CARD -->
+    <div class="details-container about-card">
       <div class="text-container">
         <p class="about-summary">
-          I am a cybersecurity engineer specializing in <strong>offensive security, digital forensics, and malware reverse engineering</strong>. 
-          With experience in penetration testing, exploit development, and forensic investigations, I work with tools such as 
-          <strong>Nmap, Burp Suite, Metasploit, Splunk, Wireshark, IDA Pro, and Autopsy</strong>. My background includes serving as a 
-          <strong>Graduate Teaching Assistant at George Mason University</strong>, mentoring 250+ students in adversarial security practices, 
-          and conducting hands-on <strong>penetration testing</strong> during my internship at HackersForYou, where I identified and helped 
-          remediate critical vulnerabilities in enterprise systems. I bring a blend of <strong>red-team expertise, forensic analysis, and 
-          research-driven problem solving</strong>, grounded in frameworks like <strong>MITRE ATT&amp;CK, NIST CSF, and Zero Trust</strong>. 
-          I’m focused on strengthening cyber-defense strategies while continuing to advance in ethical hacking and digital forensics.
-        </p>
-      </div>
+      I am a cybersecurity engineer specializing in <strong>offensive security, digital forensics, and malware reverse engineering</strong>. With experience in penetration testing, exploit development, and forensic investigations, I work with tools such as <strong>Nmap, Burp Suite, Metasploit, Splunk, Wireshark, IDA Pro, and Autopsy</strong>.
+    </p>
+    <p class="about-summary">
+      My background includes serving as a <strong>Graduate Teaching Assistant at George Mason University</strong>, mentoring 250+ students in adversarial security practices, and conducting hands-on <strong>penetration testing</strong> during my internship at HackersForYou. 
+    </p>
+    <p class="about-summary">I bring a blend of <strong>red-team expertise, forensic analysis, and research-driven problem solving</strong>, grounded in frameworks like <strong>MITRE ATT&amp;CK, NIST CSF, and Zero Trust</strong>. I’m focused on strengthening cyber-defense strategies while continuing to advance in ethical hacking and digital forensics.
+    </p>  
+    </div>
+    </div>
 
       <!-- Education card placed below the summary -->
       <div class="details-container education-card">
@@ -146,8 +146,8 @@
           <p class="role-meta">George Mason University • Jan 2024 – Present</p>
         </div>
         <div class="outcome-badges">
-          <span class="badge success">+20% student performance</span>
-          <span class="badge neutral">5+ apps hardened</span>
+          <span class="badge success">250+ students mentored</span>
+          <span class="badge neutral">Zeek & Splunk analysis</span>
         </div>
       </header>
 
@@ -173,8 +173,8 @@
           <p class="role-meta">HackersForYou (Remote) • Jun – Aug 2023</p>
         </div>
         <div class="outcome-badges">
-          <span class="badge success">–40% client-reported vulns</span>
-          <span class="badge neutral">7+ apps assessed</span>
+          <span class="badge success">30+ critical vulnerabilities found</span>
+          <span class="badge neutral">Controlled exploitation</span>
         </div>
       </header>
 
@@ -203,88 +203,197 @@
   />
 </section>
 
-      <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="projects-table-container">
-            <table class="projects-table">
-                <thead>
-                    <tr>
-                        <th>Project</th>
-                        <th>Tools</th>
-                        <th>Description</th>
-                        <th>GitHub Link</th>
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Penetration Testing and Root Privilege Escalation on a Boot2Root VM</td>
-                        <td>
-                            <div class="tools">
-                                <span>Linux</span>
-                                <span>Nmap</span>
-                                <span>Metasploit</span>
-                            </div>
-                        </td>
-                        <td>Performed penetration testing on a Boot2Root VM, exploiting remote vulnerabilities and escalating privileges to root. Documented attack vectors and methodologies for knowledge sharing. Gained hands-on experience in vulnerability analysis and exploitation in virtual environments.</td>
-                        <td><a href="https://github.com/SanjuCyb3r/Basic-Pentesting-1" target="_blank">GitHub</a></td>
-                        
-                    </tr>
-                    <tr>
-                        <td>Exploiting Multi-Service Vulnerabilities: A Metasploitable 2 Case Study</td>
-                        <td>
-                          <div class="tools">
-                              <span>Nmap</span>
-                              <span>Metasploit Framework (MSF)</span>
-                              <span>SQLmap</span>
-                              <span>Netcat</span>
-                          </div>
-                      </td>
-                        <td>Metasploitable 2 is a purposefully insecure Ubuntu-based virtual machine (hosted on VulnHub) designed for penetration testing practice, featuring vulnerabilities in services like FTP, SSH, web servers, and databases to simulate real-world attack scenarios. It provides hands-on training in using tools like Nmap, Metasploit, and SQLmap for reconnaissance, exploitation (e.g., vsftpd backdoors, UnrealIRCD flaws), and privilege escalation, while emphasizing safe lab isolation and ethical hacking principles.</td>
-                        <td><a href="https://github.com/SanjuCyb3r/Metasploitable-2" target="_blank">GitHub</a></td>
-                       
-                    </tr>
-                    <tr>
-                        <td>Project Three</td>
-                        <td>Flutter, MongoDB</td>
-                        <td>A food delivery app with cloud integration.</td>
-                        <td><a href="https://github.com/" target="_blank">GitHub</a></td>
-                        
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <img
-          src="./assests/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#achievements'"
-        />
-    </section>
-    <section id="achievements">
-      <p class="section__text__p1">Some of My</p>
-      <h1 class="title">Achievements</h1>
-      <div class="achievements-container">
-        <div class="achievement-card">
-          <h3>🏆 C2C INCS-COE CTF Finalist 2025</h3>
-          <p>Selected for the final round of the prestigious CTF hosted by India's National Cybersecurity Coordinator Cell.</p>
-        </div>
-        <div class="achievement-card">
-          <h3>📜 eJPT Certified</h3>
-          <p>Earned the eLearnSecurity Junior Penetration Tester certification validating skills in practical network and web app testing.</p>
-        </div>
-        <div class="achievement-card">
-          <h3>☁️ ICCA Certified</h3>
-          <p>Certified Cloud Associate with demonstrated proficiency in core cloud services and security principles.</p>
-        </div>
-        <div class="achievement-card">
-          <h3>👨‍🏫 Graduate Teaching Assistant – GMU</h3>
-          <p>Supported teaching and lab design for undergraduate Cybersecurity courses like CYSE 230 and CYSE 445.</p>
-        </div>
-      </div>
-      <img src="./assests/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
-    </section>
+    <section id="projects">
+  <p class="section__text__p1">Browse My Recent</p>
+  <h1 class="title">Projects</h1>
+
+  <div class="projects-table-container">
+    <table class="projects-table">
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Tools</th>
+          <th>Description</th>
+          <th>GitHub Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Boot2Root -->
+        <tr>
+          <td>Penetration Testing and Root Privilege Escalation on a Boot2Root VM</td>
+          <td>
+            <div class="tools">
+              <span>Linux</span>
+              <span>Nmap</span>
+              <span>Metasploit</span>
+            </div>
+          </td>
+          <td>
+            Performed penetration testing on a Boot2Root VM, exploiting remote vulnerabilities and escalating
+            privileges to root. Documented attack paths and techniques for knowledge sharing, building hands-on
+            experience in vulnerability analysis and exploitation in safe lab environments.
+          </td>
+          <td><a class="btn btn-table" href="https://github.com/SanjuCyb3r/Basic-Pentesting-1" target="_blank" rel="noopener">GitHub</a></td>
+        </tr>
+
+        <!-- Metasploitable 2 -->
+        <tr>
+          <td>Exploiting Multi-Service Vulnerabilities: A Metasploitable 2 Case Study</td>
+          <td>
+            <div class="tools">
+              <span>Nmap</span>
+              <span>Metasploit Framework (MSF)</span>
+              <span>SQLmap</span>
+              <span>Netcat</span>
+            </div>
+          </td>
+          <td>
+            Metasploitable 2 is an intentionally vulnerable Ubuntu VM for penetration-testing practice. Explored
+            reconnaissance, exploitation (e.g., vsftpd backdoor, UnrealIRCD flaws), and privilege escalation workflows,
+            emphasizing safe isolation, repeatability, and ethical hacking principles.
+          </td>
+          <td><a class="btn btn-table" href="https://github.com/SanjuCyb3r/Metasploitable-2" target="_blank" rel="noopener">GitHub</a></td>
+        </tr>
+
+        <!-- NEW: Malware Reverse Engineering -->
+        <tr>
+          <td>Malware Reverse Engineering</td>
+          <td>
+            <div class="tools">
+              <span>IDA Pro</span>
+              <span>YARA</span>
+              <span>Process Monitor</span>
+              <span>Wireshark</span>
+              <span>FakeDNS</span>
+            </div>
+          </td>
+          <td>
+            Performed static and dynamic analysis of Windows malware: parsed PE headers, disassembled binaries, and
+            extracted IOCs. Tracked runtime behavior with ProcMon/Explorer and Wireshark to expose persistence,
+            DLL-injection, and anomalous file activity. Intercepted C2 DNS via FakeDNS and developed targeted mitigations.
+          </td>
+          <td><a class="btn btn-table" href="https://github.com/SanjuCyb3r/ms16iexec-malware-analysis" target="_blank" rel="noopener">GitHub</a></td>
+        </tr>
+
+        <!-- NEW: Practical Hard-Drive Forensic Examination -->
+        <tr>
+          <td>Practical Hard-Drive Forensic Examination — Expert Witness Report</td>
+          <td>
+            <div class="tools">
+              <span>FTK Imager</span>
+              <span>WiebeTech UltraDock</span>
+              <span>Autopsy</span>
+            </div>
+          </td>
+          <td>
+            Acquired a forensically sound image of a 40 GB HDD with FTK Imager and write-blocker, preserving chain
+            of custody. Recovered emails, spreadsheets, and jailbreak traces in Autopsy; correlated users and actions,
+            supporting legal findings with documented artifacts and methodology.
+          </td>
+          <td><a class="btn btn-table" href="https://github.com/SanjuCyb3r/hard-drive-forensics" target="_blank" rel="noopener">GitHub</a></td>
+        </tr>
+
+        <!-- Your placeholder row -->
+       
+      </tbody>
+    </table>
+  </div>
+
+  <img
+    src="./assests/arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="location.href='./#achievements'"
+  />
+</section>
+
+
+   <section id="achievements">
+  <p class="section__text__p1">Some of My</p>
+  <h1 class="title">Achievements</h1>
+
+  <div class="achievements-container">
+    <!-- Keep this achievement -->
+    <div class="achievement-card">
+      <h3>🏆 C2C INCS-COE CTF Finalist 2025</h3>
+      <p>Selected for the final round of the prestigious CTF hosted by India's National Cybersecurity Coordinator Cell.</p>
+    </div>
+
+    <!-- Certifications as achievements (clickable to credentials) -->
+    <div class="achievement-card">
+      <h3>
+        <a href="https://www.coursera.org/account/accomplishments/professional-cert/IVR6TXW67H9L" target="_blank" rel="noopener">
+          📜 Google Cybersecurity — Coursera
+        </a>
+      </h3>
+      <p>Professional Certificate covering SOC operations, network defense, and incident response.</p>
+    </div>
+
+    <div class="achievement-card">
+      <h3>
+        <a href="https://certs.ine.com/ef844c6e-ce79-4c67-a2bf-e53eae42a7ea#gs.bqduqn" target="_blank" rel="noopener">
+          🔐 eJPT — Junior Penetration Tester (INE)
+        </a>
+      </h3>
+      <p>Hands-on validation of practical network and web application penetration testing skills.</p>
+    </div>
+
+    <div class="achievement-card">
+      <h3>
+        <a href="https://certs.ine.com/f28b5436-a6d2-4af7-9c6d-38b6b3ac7a97" target="_blank" rel="noopener">
+          ☁️ ICCA — Certified Cloud Associate (INE)
+        </a>
+      </h3>
+      <p>Core cloud services, IAM, networking, and security fundamentals.</p>
+    </div>
+
+    <div class="achievement-card">
+      <h3>
+        <a href="https://app.onlinecoursehost.com/certificate-proof/EWCMtAhS9bQgqAhVHuI5wJwrR5r1/YQdCEpJMDMILoe39Nv23/AYT6h9AEHaR65IES9laD2mv8cjw1" target="_blank" rel="noopener">
+          🛡 Offensive Hacking Unfolded — The Beginner’s Edition (comproavi)
+        </a>
+      </h3>
+      <p>Introductory ethical-hacking program covering recon, exploitation, and reporting.</p>
+    </div>
+
+    <div class="achievement-card">
+      <h3>
+        <a href="https://drive.google.com/file/d/1tAhzT7UxufbIDrTWMDOZdunVao9-t6nU/view?usp=sharing" target="_blank" rel="noopener">
+          🧠 Cyber Threat Intelligence 101 — arcX
+        </a>
+      </h3>
+      <p>Foundations of CTI workflows: indicators, adversary behavior, and reporting.</p>
+    </div>
+    
+
+    <div class="achievement-card">
+  <h3>
+    <a href="https://drive.google.com/file/d/149oUiV7ZsXaAPjiPLwxxGoMpkaVNqFDp/view?usp=sharing"
+       target="_blank" rel="noopener">
+      🛰️ Research Intern — Research Centre Imarat (DRDO)
+    </a>
+  </h3>
+  <p>
+    Completed internship on <em>Analysis and Simulation of BLDC Motor using MATLAB-Simulink</em>
+    at RCI, Hyderabad (May–Jun 2022), under the guidance of Dr. B. V. Ravi Kumar.
+  </p>
+</div>
+
+<div class="achievement-card">
+  <h3>
+    <a href="https://www.instagram.com/p/ChRVGpAsOJA/?img_index=5&igsh=ZXdwamk0NDZtdTZr"
+       target="_blank" rel="noopener">
+      ⚙️ IEEE MVSR Student Branch — Operations Committee
+    </a>
+  </h3>
+  <p>Served on the Operations Committee, supporting event logistics, coordination, and chapter activities; featured in the official committee announcement.</p>
+</div>
+
+  </div>
+
+  <img src="./assests/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+</section>
+
     
       <section id="contact">
         <p class="section__text__p1">Get in Touch</p>

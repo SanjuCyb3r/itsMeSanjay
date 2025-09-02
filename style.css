@@ -920,3 +920,242 @@ footer p {
   #experience .experience-grid { grid-template-columns: 1fr; }
   #experience .outcome-badges { justify-content: flex-start; }
 }
+
+/* Pastel colors for the tool chips at the bottom of each card */
+#experience .chip {
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #f8fafc;      /* fallback */
+  color: #334155;
+  line-height: 1.1;
+}
+
+/* Cycle soft pastels across chips (1..6, then repeat) */
+#experience .tool-chips .chip:nth-child(6n+1) {
+  background: #E6F2FF;      /* pastel blue */
+  border-color: #D5E9FF;
+  color: #0F3A66;
+}
+#experience .tool-chips .chip:nth-child(6n+2) {
+  background: #E8F7EF;      /* pastel green */
+  border-color: #D9F1E2;
+  color: #1B5E20;
+}
+#experience .tool-chips .chip:nth-child(6n+3) {
+  background: #FFF3E0;      /* pastel orange */
+  border-color: #FFE3BA;
+  color: #8C4A00;
+}
+#experience .tool-chips .chip:nth-child(6n+4) {
+  background: #FDEEF4;      /* pastel pink/rose */
+  border-color: #F8D9E6;
+  color: #7A1F3D;
+}
+#experience .tool-chips .chip:nth-child(6n+5) {
+  background: #EDE7F6;      /* pastel purple */
+  border-color: #E0D7FA;
+  color: #4527A0;
+}
+#experience .tool-chips .chip:nth-child(6n) {
+  background: #E0F7FA;      /* pastel teal */
+  border-color: #CDEFF3;
+  color: #006064;
+}
+
+/* Nice subtle hover */
+#experience .chip:hover {
+  filter: brightness(1.04);
+}
+
+/* --- Projects: pastel tool pills --- */
+.projects-table .tools span {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 999px;
+  background-color: #f8fafc; /* fallback */
+  color: #334155;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* rotate soft pastels; add more if needed */
+.projects-table .tools span:nth-child(6n+1) { background:#E6F2FF; border-color:#D5E9FF; color:#0F3A66; }  /* blue */
+.projects-table .tools span:nth-child(6n+2) { background:#E8F7EF; border-color:#D9F1E2; color:#1B5E20; }  /* green */
+.projects-table .tools span:nth-child(6n+3) { background:#FFF3E0; border-color:#FFE3BA; color:#8C4A00; }  /* orange */
+.projects-table .tools span:nth-child(6n+4) { background:#FDEEF4; border-color:#F8D9E6; color:#7A1F3D; }  /* rose */
+.projects-table .tools span:nth-child(6n+5) { background:#EDE7F6; border-color:#E1D9F7; color:#4527A0; }  /* purple */
+.projects-table .tools span:nth-child(6n)   { background:#E0F7FA; border-color:#CDEFF3; color:#006064; }  /* teal */
+
+.projects-table .tools span:hover { filter: brightness(1.04); }
+
+/* --- Projects: GitHub button inside table cells --- */
+.btn-table {
+  display: inline-block;
+  width: auto;              /* don't use the global 8rem width */
+  padding: 0.5rem 0.9rem;
+  font-size: 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgb(53,53,53);
+  background: #fff;
+  color: #111;
+  text-decoration: none;
+}
+
+.btn-table:hover {
+  background: rgb(53,53,53);
+  color: #fff;
+}
+
+/* Force black text on the GitHub button in the table */
+.projects-table .btn-table,
+.projects-table .btn-table:link,
+.projects-table .btn-table:visited {
+  color: #000 !important;
+}
+
+.projects-table .btn-table:hover,
+.projects-table .btn-table:focus,
+.projects-table .btn-table:active {
+  color: #000 !important;         /* keep black on hover too */
+  background: #f2f2f2;            /* subtle hover fill */
+  border-color: rgb(53, 53, 53);
+  text-decoration: none;
+}
+
+
+/* Make the Education card match Experience card borders */
+.details-container.education-card {
+  background: #fff;
+  border: none !important;                 /* remove the gray outline */
+  border-radius: 14px;                     /* same radius as experience-card */
+  box-shadow: 0 10px 24px rgba(0,0,0,.06); /* same soft shadow */
+  padding: 1.25rem 1.5rem;                 /* same inner spacing */
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+/* Optional: same hover micro-lift as experience cards */
+.details-container.education-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.09);
+}
+
+/* About: match the Experience content width and center it */
+#about .section-container,
+#about .about-details-container {
+  max-width: 1100px;     /* same as .experience-grid */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Keep the summary comfortable and centered */
+#about .text-container {
+  max-width: 1000px;     /* optional: prevents super-long line length */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Make sure the education card fills the capped width */
+#about .education-card {
+  width: 100%;
+}
+
+/* Align the master's text with the About paragraph */
+#about {
+  --edu-title-col: 110px;              /* tweak to 110–130px to fine-tune */
+}
+
+#about .education-card {
+  max-width: 1100px;                   /* same cap as Experience */
+  margin: 0 auto;
+  padding-left: 1.25rem;               /* same inner padding as cards */
+  padding-right: 1.25rem;
+}
+
+#about .education-title {
+  flex: 0 0 var(--edu-title-col);      /* was ~15% (~165px) — now tighter */
+  max-width: var(--edu-title-col);
+  text-align: left;                    /* keep text close to the icon */
+}
+
+#about .education-details {
+  margin-left: .25rem;                 /* tiny nudge to close the gap */
+}
+
+@media (min-width: 1024px) {
+  #about .education-card { transform: translateX(-50px); }
+}
+
+/* Pastel cards for About + Education (same look as experience cards) */
+#about {
+  /* easy-to-tweak pastel backgrounds */
+  --card-bg-about: #EAF3FF;  /* soft blue */
+  --card-bg-edu:   #ffffff;  /* soft rose */
+  --edu-title-col: 120px;    /* keep your alignment tweak */
+}
+
+/* Base card look to match experience cards */
+#about .details-container.about-card,
+#about .details-container.education-card {
+  background: #fff;                 /* default, overridden below */
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  padding: 1.25rem 1.5rem;
+  max-width: 1100px;                /* same width as Experience */
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+#about .details-container.about-card    { background: var(--card-bg-about); }
+#about .details-container.education-card{ background: var(--card-bg-edu);   }
+
+/* Optional micro-lift on hover (matches your experience cards) */
+#about .details-container.about-card:hover,
+#about .details-container.education-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.09);
+}
+
+/* Keep the Education label column narrow so MS text aligns with About paragraph */
+#about .education-title {
+  flex: 0 0 var(--edu-title-col);
+  max-width: var(--edu-title-col);
+  text-align: left;
+}
+
+/* Small nudge on the degree columns (keeps spacing tidy) */
+#about .education-details { margin-left: .25rem; }
+
+/* Optional: limit paragraph line length inside the About card for readability */
+#about .about-card .about-summary {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Ensure About and Education cards have identical width and alignment */
+#about .details-container.about-card,
+#about .details-container.education-card {
+  width: 100%;
+  max-width: 1100px;   /* same cap for both cards */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Remove any extra content width limit inside the About card */
+#about .about-card .about-summary {
+  max-width: none;     /* lets the text use the full card width */
+}
+
+/* Extra space between About paragraphs (looks like an empty line) */
+#about .about-card .text-container p {
+  margin: 0 0 1.25rem;   /* bottom gap = ~one line; tweak 1rem–1.5rem */
+}
+
+#about .about-card .text-container p:last-child {
+  margin-bottom: 0;      /* no extra space after the final paragraph */
+}
+/* Space between the About Me title and the text card */
+#about .about-details-container {
+  margin-top: 4.25rem;   /* <-- increase/decrease this to move the card down/up */
+}
