@@ -1690,3 +1690,107 @@ footer p {
 @media (min-width: 1920px) {
   html { font-size: clamp(15px, 0.9vmin + 11px, 18px); }
 }
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   DESKTOP/TABLET (≥1025px) — shrink ALL content text fluidly
+   (Mobile stays exactly as-is)
+   ========================================================= */
+@media (min-width: 1025px) {
+
+  /* Anchor jumps account for header height */
+  html { scroll-padding-top: 110px; }
+
+  /* Global desktop scale:
+     Small on 1366×768, comfortable on 1440p/4K.
+     vmin ties size to the smaller side so short screens shrink more. */
+  html { font-size: clamp(14px, 0.9vmin + 9px, 17px); }
+  body { line-height: 1.6; }
+
+  /* --- UNIVERSAL downsizing for main sections --- */
+  /* Put a compact base font-size on each section so all inner rem/em content scales. */
+  #profile,
+  #about,
+  #experience,
+  #projects,
+  #achievements,
+  #contact {
+    font-size: 0.92rem;   /* global nudge down; still fluid via html clamp above */
+  }
+
+  /* Section “page” layout: no bleed when jumping by menu/arrows */
+  section {
+    min-height: calc(100vh - 110px);
+    height: auto !important;
+    padding-top: 4vh;
+    padding-bottom: 6vh;
+    margin-left: clamp(3rem, 6vw, 9rem);
+    margin-right: clamp(3rem, 6vw, 9rem);
+  }
+
+  /* --- HERO: keep photo big, text compact --- */
+  #profile {
+    align-items: center;
+    gap: clamp(1.5rem, 3vmin, 4rem);
+  }
+  .section_pic_container {
+    width: clamp(440px, 26vmin, 560px);
+    height: clamp(440px, 26vmin, 560px);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0;
+  }
+  .profile-pic { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+  /* Headline + subtitle: keep modest */
+  .title { font-size: clamp(1.9rem, 3.8vmin, 2.6rem); line-height: 1.15; }
+  .section__text__p2 { font-size: clamp(1.0rem, 1.8vmin, 1.25rem); line-height: 1.35; }
+  p, li { font-size: clamp(0.95rem, 1.4vmin, 1.05rem); line-height: 1.7; }
+
+  /* --- ABOUT: paragraphs were visually large; rein them in further --- */
+  #about .about-card .text-container p {
+    font-size: clamp(0.95rem, 1.35vmin, 1.05rem);
+  }
+
+  /* --- EXPERIENCE: cards and bullets more compact so two columns fit --- */
+  #experience .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: clamp(1rem, 2.2vmin, 2rem);
+    margin-top: 1rem;
+  }
+  #experience .experience-card {
+    padding: clamp(0.85rem, 1.8vmin, 1.1rem);
+    font-size: 0.92rem;  /* compact everything inside the card */
+  }
+  #experience .role-bullets li { margin: .3rem 0; }
+
+  /* --- PROJECTS: table text + cell padding trimmed so rows fit a viewport --- */
+  .projects-table {
+    font-size: clamp(0.9rem, 1.3vmin, 0.98rem);
+  }
+  .projects-table th,
+  .projects-table td {
+    padding: clamp(0.55rem, 1.2vmin, 0.85rem);
+  }
+
+  /* --- ACHIEVEMENTS: card copy slightly smaller --- */
+  .achievement-card {
+    padding: clamp(0.9rem, 1.9vmin, 1.25rem);
+    font-size: 0.95rem;
+  }
+}
+
+/* Ultra-wide guardrail so type doesn’t bloat on huge monitors */
+@media (min-width: 1920px) {
+  html { font-size: clamp(15px, 0.75vmin + 10px, 17px); }
+}
