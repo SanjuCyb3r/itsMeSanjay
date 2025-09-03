@@ -1256,3 +1256,84 @@ footer p {
   /* Arrows: don’t pin off-screen on mobile */
   .arrow { position: static; margin: 1rem auto 0; }
 }
+
+
+
+
+/* ---------- MOBILE-ONLY PATCH (≤ 768px) — desktop untouched ---------- */
+@media (max-width: 768px) {
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  /* Make sizing predictable on phones without touching desktop */
+  *, *::before, *::after { box-sizing: border-box; }
+
+  /* The main overflow causes */
+  section {
+    height: auto !important;          /* was 96vh */
+    min-height: 0 !important;
+    margin: 0 1rem !important;        /* was 0 10rem */
+    padding-top: 3.5rem !important;
+    max-width: 100vw !important;
+  }
+
+  /* Hero layout */
+  #profile {
+    height: auto !important;          /* was 80vh */
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  /* The avatar is hard-coded to 400×400 in multiple places — clamp it */
+  #profile .section_pic_container,
+  .section_pic_container {
+    width: clamp(160px, 60vw, 240px) !important;
+    height: clamp(160px, 60vw, 240px) !important;
+    margin: 0 auto 1rem !important;
+  }
+  .profile-pic { width: 100% !important; height: 100% !important; object-fit: cover; }
+
+  /* Cards/containers should never exceed the screen */
+  .section-container,
+  .about-details-container,
+  .details-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1rem !important;
+  }
+
+  /* Prevent long lines/words from pushing layout wider */
+  .text-container,
+  .details-container,
+  p, li {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  /* Experience → single column */
+  #experience .experience-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    margin-top: 1rem !important;
+  }
+
+  /* Projects: allow horizontal scroll if table is wide */
+  .projects-table-container { overflow-x: auto !important; }
+  .projects-table { min-width: 680px; }
+
+  /* Keep hamburger drawer above content and constrained to viewport */
+  .menu-links {
+    position: fixed !important;
+    top: 64px; left: 0; right: 0;
+    max-width: 100vw;
+    z-index: 10000;
+    max-height: 0; overflow: hidden;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+  }
+  .menu-links.open { max-height: 70vh !important; }
+}
