@@ -1372,3 +1372,20 @@ footer p {
   #profile { margin-bottom: -5rem !important; } /* was 6rem; tweak as you like */
   #about   { margin-top: 0 !important; }      /* remove any extra top offset */
 }
+
+
+
+
+
+
+/* Desktop/tablet: make #about start at the top like #experience */
+@media (min-width: 1025px) {
+  #about {
+    padding-top: 0 !important;        /* remove extra top space */
+    scroll-margin-top: 110px;          /* keeps anchor clear of the header */
+  }
+  /* The big offset inside About was this container; keep a small gap only */
+  #about .about-details-container {
+    margin-top: 1rem !important;       /* was much larger; adjust if needed */
+  }
+}
