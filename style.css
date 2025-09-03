@@ -1354,3 +1354,147 @@ footer p {
 
 
 
+/* ===========================
+   DESKTOP / LAPTOP (≥ 769px)
+   Fluid type + flexible layout
+   =========================== */
+@media (min-width: 769px) {
+  /* Fluid base type (scales roughly 15px → 18px across laptop/desktop) */
+  html { font-size: clamp(15px, 0.9vw + 10px, 18px); }
+  body { line-height: 1.55; }
+
+  /* Nav text scales without blowing up */
+  nav .nav-links { font-size: clamp(1rem, 0.7vw + 0.6rem, 1.25rem); }
+
+  /* Hero/section text scales smoothly */
+  .title {                         /* h1s like “About Me”, “Projects” */
+    font-size: clamp(2rem, 2.6vw + 0.4rem, 3.2rem);
+    line-height: 1.15;
+  }
+  .section__text__p1 {
+    font-size: clamp(1rem, 0.7vw + 0.5rem, 1.25rem);
+  }
+  .section__text__p2 {             /* subtitle under your name */
+    font-size: clamp(1.1rem, 1.1vw + 0.4rem, 1.75rem);
+    line-height: 1.3;
+  }
+  p, li {                          /* default body copy */
+    font-size: clamp(1rem, 0.65vw + 0.55rem, 1.125rem);
+    line-height: 1.6;
+  }
+
+  /* Let sections grow naturally instead of forcing vh; margins scale by screen */
+  section {
+    height: auto;             /* was 96vh on desktop – causes collisions */
+    min-height: 0;
+    margin: 0 clamp(2rem, 8vw, 10rem);  /* keep your “wide” look on big screens */
+  }
+  #profile {
+    height: auto;             /* was 80vh – allow copy to wrap */
+    gap: clamp(1.5rem, 4vw, 5rem);
+  }
+
+  /* Avatar: stop the 200% upscaling on desktop, keep a fluid circle size */
+  .section_pic_container {
+    width: clamp(260px, 22vw, 400px);
+    height: clamp(260px, 22vw, 400px);
+  }
+  .profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* fills the circle without overflow */
+    border-radius: 50%;
+  }
+
+  /* Keep experience grid at 2 columns on laptops/desktops; mobile stays 1 col */
+  #experience .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Table text shouldn’t balloon; keep it tidy */
+  .projects-table {
+    font-size: clamp(0.95rem, 0.6vw + 0.45rem, 1rem);
+  }
+}
+
+/* Optional: very large desktops (≥ 1920px) – small boost without going huge */
+@media (min-width: 1920px) {
+  html { font-size: clamp(16px, 0.55vw + 12px, 19px); }
+}
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   DESKTOP/TABLET (≥ 1025px) ONLY
+   Fluid type, safe spacing, big avatar
+   =============================== */
+@media (min-width: 1025px) {
+
+  /* 1) Fluid base type (keeps your 32" look while scaling on laptops) */
+  html { font-size: clamp(16px, 0.6vw + 12px, 19px); }
+  body { line-height: 1.55; }
+
+  /* Headings and body scale smoothly */
+  .title { font-size: clamp(2.6rem, 2.2vw + 1rem, 4rem); line-height: 1.15; }
+  .section__text__p2 { font-size: clamp(1.25rem, 1vw + .5rem, 2rem); line-height: 1.35; }
+  p, li { font-size: clamp(1rem, 0.55vw + .7rem, 1.125rem); line-height: 1.65; }
+
+  /* 2) Let sections grow; keep your wide gutters; add vertical breathing room */
+  section {
+    height: auto !important;          /* stop fixed viewport heights */
+    min-height: 0 !important;
+    margin-left: clamp(6rem, 8vw, 10rem);
+    margin-right: clamp(6rem, 8vw, 10rem);
+    padding-top: 4vh;
+  }
+  /* extra space so About never overlaps the hero */
+  #about { margin-top: 6rem; }
+
+  /* 3) Keep hero big on desktop but responsive */
+  #profile {
+    height: auto !important;          /* allow text to wrap without collision */
+    min-height: 78vh;                 /* preserves your large-hero feel */
+    gap: clamp(2rem, 4vw, 5rem);
+    align-items: center;
+  }
+
+  /* 4) Restore a large circular avatar (fluid, not tiny) */
+  .section_pic_container {
+    width: clamp(360px, 24vw, 440px);   /* big on 32", smaller on laptops */
+    height: clamp(360px, 24vw, 440px);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0;                          /* keep layout aligned */
+  }
+  .profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                  /* fills the circle cleanly */
+    border-radius: 50%;
+  }
+
+  /* 5) Experience grid = 2 columns on desktop; mobile rules remain as-is */
+  #experience .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  /* 6) Projects table text stays tidy on any monitor */
+  .projects-table { font-size: clamp(.95rem, .45vw + .6rem, 1rem); }
+}
+
+/* Optional: ultra-wide monitors (≥ 1920px) get a tiny readability bump */
+@media (min-width: 1920px) {
+  html { font-size: clamp(16px, 0.5vw + 12px, 20px); }
+}
