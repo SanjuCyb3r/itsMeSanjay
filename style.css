@@ -1353,3 +1353,12 @@ footer p {
 
 
 
+/* Add 6rem space after each section on desktop/tablet */
+@media (min-width: 1025px) {
+  section {
+    margin-bottom: 6rem !important;
+  }
+  section:last-of-type {
+    margin-bottom: 0 !important; /* no extra space after the last section */
+  }
+}
