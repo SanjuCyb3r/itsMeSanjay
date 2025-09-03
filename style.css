@@ -1800,3 +1800,51 @@ footer p {
 
 
 
+/* =========================================================
+   DESKTOP/TABLET (≥1025px) — one-screen sections + real gaps
+   (Mobile remains exactly as-is)
+   ========================================================= */
+@media (min-width: 1025px) {
+  :root{
+    --header-h: 110px;                   /* your desktop nav height */
+    --section-gap: clamp(48px, 6vh, 96px); /* white space BETWEEN sections */
+  }
+
+  /* Anchor jumps land below the fixed header */
+  html { scroll-padding-top: var(--header-h); }
+  body { overflow-x: hidden; }
+
+  /* Each section occupies one viewport "page"
+     and we subtract the gap so the next section never peeks in */
+  section {
+    height: auto !important;
+    min-height: calc(100vh - var(--header-h) - var(--section-gap));
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    margin-left: clamp(3rem, 6vw, 9rem);
+    margin-right: clamp(3rem, 6vw, 9rem);
+
+    /* The visible gap BELOW the section (not part of the next section) */
+    margin-bottom: var(--section-gap);
+
+    /* Make hash links scroll precisely to section top */
+    scroll-margin-top: var(--header-h);
+  }
+
+  /* First/last section edge-cases */
+  section:first-of-type {
+    /* keeps hero centered but still one-screen tall */
+    min-height: calc(100vh - var(--header-h) - var(--section-gap));
+  }
+  section:last-of-type {
+    /* end of page shouldn’t add extra empty space */
+    min-height: calc(100vh - var(--header-h));
+    margin-bottom: 0;
+  }
+
+  /* Optional: smooth "one section at a time" feel without fighting anchors */
+  /* Uncomment if you want snap scrolling on desktop:
+  body { scroll-snap-type: y proximity; }
+  section { scroll-snap-align: start; scroll-snap-stop: always; }
+  */
+}
