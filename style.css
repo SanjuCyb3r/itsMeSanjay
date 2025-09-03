@@ -1157,7 +1157,7 @@ footer p {
 }
 /* Space between the About Me title and the text card */
 #about .about-details-container {
-  margin-top: 7.25rem;   /* <-- increase/decrease this to move the card down/up */
+  margin-top: 12.25rem;   /* <-- increase/decrease this to move the card down/up */
 }
 
 
