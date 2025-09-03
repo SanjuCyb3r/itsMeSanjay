@@ -1337,3 +1337,89 @@ footer p {
   }
   .menu-links.open { max-height: 70vh !important; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   DESKTOP / LAPTOP (≥ 769px)
+   Fluid type + flexible layout
+   =========================== */
+@media (min-width: 769px) {
+  /* Fluid base type (scales roughly 15px → 18px across laptop/desktop) */
+  html { font-size: clamp(15px, 0.9vw + 10px, 18px); }
+  body { line-height: 1.55; }
+
+  /* Nav text scales without blowing up */
+  nav .nav-links { font-size: clamp(1rem, 0.7vw + 0.6rem, 1.25rem); }
+
+  /* Hero/section text scales smoothly */
+  .title {                         /* h1s like “About Me”, “Projects” */
+    font-size: clamp(2rem, 2.6vw + 0.4rem, 3.2rem);
+    line-height: 1.15;
+  }
+  .section__text__p1 {
+    font-size: clamp(1rem, 0.7vw + 0.5rem, 1.25rem);
+  }
+  .section__text__p2 {             /* subtitle under your name */
+    font-size: clamp(1.1rem, 1.1vw + 0.4rem, 1.75rem);
+    line-height: 1.3;
+  }
+  p, li {                          /* default body copy */
+    font-size: clamp(1rem, 0.65vw + 0.55rem, 1.125rem);
+    line-height: 1.6;
+  }
+
+  /* Let sections grow naturally instead of forcing vh; margins scale by screen */
+  section {
+    height: auto;             /* was 96vh on desktop – causes collisions */
+    min-height: 0;
+    margin: 0 clamp(2rem, 8vw, 10rem);  /* keep your “wide” look on big screens */
+  }
+  #profile {
+    height: auto;             /* was 80vh – allow copy to wrap */
+    gap: clamp(1.5rem, 4vw, 5rem);
+  }
+
+  /* Avatar: stop the 200% upscaling on desktop, keep a fluid circle size */
+  .section_pic_container {
+    width: clamp(260px, 22vw, 400px);
+    height: clamp(260px, 22vw, 400px);
+  }
+  .profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* fills the circle without overflow */
+    border-radius: 50%;
+  }
+
+  /* Keep experience grid at 2 columns on laptops/desktops; mobile stays 1 col */
+  #experience .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Table text shouldn’t balloon; keep it tidy */
+  .projects-table {
+    font-size: clamp(0.95rem, 0.6vw + 0.45rem, 1rem);
+  }
+}
+
+/* Optional: very large desktops (≥ 1920px) – small boost without going huge */
+@media (min-width: 1920px) {
+  html { font-size: clamp(16px, 0.55vw + 12px, 19px); }
+}
