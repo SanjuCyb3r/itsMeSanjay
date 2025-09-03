@@ -1601,3 +1601,92 @@ footer p {
 @media (min-width: 1920px) {
   html { font-size: clamp(16px, 0.28vw + 14px, 18.5px); }
 }
+
+
+
+/* ==========================================================
+   DESKTOP/TABLET (≥1025px) — vmin-based fluid scale + 1-screen sections
+   (Mobile rules remain exactly as you have them)
+   ========================================================== */
+@media (min-width: 1025px) {
+
+  /* Anchor jumps stop below header; tune if your header changes */
+  html { scroll-padding-top: 110px; }
+
+  /* --- Global fluid type tied to the smaller viewport side --- */
+  /* Keeps text compact on short laptops and small monitors, still grows on 32" */
+  html { font-size: clamp(14px, 1.1vmin + 10px, 18px); }
+  body { line-height: 1.6; }
+
+  /* Headings stay modest and proportional */
+  .title {                   /* e.g., About Me, Projects */
+    font-size: clamp(1.8rem, 4.2vmin, 3rem);
+    line-height: 1.15;
+  }
+  .section__text__p2 {       /* subtitle under name */
+    font-size: clamp(1.0rem, 2.0vmin, 1.35rem);
+    line-height: 1.35;
+  }
+  p, li {                    /* default body copy */
+    font-size: clamp(0.95rem, 1.6vmin, 1.1rem);
+    line-height: 1.7;
+  }
+
+  /* --- One-viewport sections (no bleed) --- */
+  section {
+    min-height: calc(100vh - 110px);   /* full screen minus header */
+    height: auto !important;
+    padding-top: 4vh;
+    padding-bottom: 6vh;
+    margin-left: clamp(3rem, 6vw, 9rem);
+    margin-right: clamp(3rem, 6vw, 9rem);
+  }
+
+  /* Add a little buffer so About never collides with the hero */
+  #about { margin-top: 4vh; }
+
+  /* --- Hero: big but fluid avatar --- */
+  #profile {
+    min-height: calc(100vh - 110px);
+    height: auto !important;
+    gap: clamp(1.5rem, 3.2vmin, 4rem);
+    align-items: center;
+  }
+  .section_pic_container {
+    width: clamp(420px, 28vmin, 560px);   /* stays big on 32", shrinks on small screens */
+    height: clamp(420px, 28vmin, 560px);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0;
+  }
+  .profile-pic { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+  /* --- Experience layout: two columns, compact content so it fits --- */
+  #experience .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: clamp(1rem, 2.4vmin, 2rem);
+    margin-top: 1rem;
+  }
+  #experience .experience-card { padding: clamp(0.9rem, 2vmin, 1.25rem); }
+  #experience .role-bullets li { margin: .35rem 0; }
+
+  /* --- Projects table: compact on small monitors, readable on big --- */
+  .projects-table {
+    font-size: clamp(0.9rem, 1.5vmin, 1rem);
+  }
+  .projects-table th,
+  .projects-table td {
+    padding: clamp(0.6rem, 1.6vmin, 1rem);
+  }
+
+  /* --- Achievements cards breathe but fit --- */
+  .achievement-card {
+    padding: clamp(1rem, 2.2vmin, 1.5rem);
+  }
+}
+
+/* Optional tiny nudge for ultra-wide ≥1920px (keeps type from growing too much) */
+@media (min-width: 1920px) {
+  html { font-size: clamp(15px, 0.9vmin + 11px, 18px); }
+}
