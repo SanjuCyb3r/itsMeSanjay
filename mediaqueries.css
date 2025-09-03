@@ -101,3 +101,71 @@
       text-align: justify;
     }
 }
+
+
+
+
+/* ===== MOBILE-ONLY OVERRIDES (≤ 768px) — do NOT affect desktop ===== */
+@media (max-width: 768px) {
+  html, body { max-width: 100%; overflow-x: hidden !important; }
+
+  /* The two rules below are the main “zoom out” culprits */
+  section {
+    margin: 0 1rem !important;       /* was 0 10rem */
+    height: auto !important;         /* was 96vh */
+    min-height: 0 !important;
+    padding-top: 3.5rem !important;
+    box-sizing: border-box;
+  }
+
+  /* Hero: stack + shrink the fixed 400px circle so it can fit on phones */
+  #profile { 
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    height: auto !important;
+  }
+  .section_pic_container {
+    width: clamp(160px, 60vw, 240px) !important;
+    height: clamp(160px, 60vw, 240px) !important;
+    margin: 0 auto 1rem !important;
+  }
+  .profile-pic { width: 100% !important; height: 100% !important; object-fit: cover; }
+
+  /* Cards and containers: don’t exceed the viewport */
+  .details-container,
+  #about .about-details-container,
+  #about .section-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1rem !important;
+  }
+
+  /* Experience → single column on phones */
+  #experience .experience-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    margin-top: 1rem !important;
+  }
+
+  /* Education layout */
+  .education-card { flex-direction: column !important; align-items: stretch !important; }
+  .education-title { max-width: none !important; text-align: left !important; }
+
+  /* Projects: allow horizontal scroll instead of squeezing columns */
+  .projects-table-container { overflow-x: auto !important; }
+  .projects-table { min-width: 680px !important; }
+
+  /* Keep hamburger menu above content */
+  .menu-links {
+    position: fixed !important;
+    top: 64px; left: 0; right: 0;
+    z-index: 10000 !important;
+    max-height: 0; overflow: hidden;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+  }
+  .menu-links.open { max-height: 70vh !important; }
+}
