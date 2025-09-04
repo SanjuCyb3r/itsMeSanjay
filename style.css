@@ -1157,7 +1157,7 @@ footer p {
 }
 /* Space between the About Me title and the text card */
 #about .about-details-container {
-  margin-top: 7.25rem;   /* <-- increase/decrease this to move the card down/up */
+  margin-top: 4.25rem;   /* <-- increase/decrease this to move the card down/up */
 }
 
 
@@ -1388,7 +1388,7 @@ footer p {
   /* trim the helper line and h1 default top margin */
   #about .section__text__p1 {
     margin-top: 0 !important;
-    margin-bottom: 0.5rem !important; /* small gap above the title */
+    margin-bottom: 0.25rem !important; /* small gap above the title */
   }
   #about .title {
     margin-top: 0 !important;
