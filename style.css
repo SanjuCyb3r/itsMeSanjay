@@ -1289,8 +1289,8 @@ footer p {
   /* The avatar is hard-coded to 400×400 in multiple places — clamp it */
   #profile .section_pic_container,
   .section_pic_container {
-    width: clamp(160px, 60vw, 240px) !important;
-    height: clamp(160px, 60vw, 240px) !important;
+    width: clamp(320px, 60vw, 400px) !important;
+    height: clamp(320px, 60vw, 400px) !important;
     margin: 0 auto 1rem !important;
   }
   .profile-pic { width: 100% !important; height: 100% !important; object-fit: cover; }
