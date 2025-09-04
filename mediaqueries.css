@@ -130,7 +130,7 @@
     height: clamp(160px, 60vw, 240px) !important;
     margin: 0 auto 1rem !important;
   }
-  .profile-pic { width: 250% !important; height: 250% !important; object-fit: cover; }
+  .profile-pic { width: 200% !important; height: 200% !important; object-fit: cover; }
 
   /* Cards and containers: don’t exceed the viewport */
   .details-container,
