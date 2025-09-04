@@ -1391,6 +1391,6 @@ footer p {
     margin-bottom: 0.5rem !important; /* small gap above the title */
   }
   #about .title {
-    margin-top: -5 !important;         /* kill UA h1 top margin */
+    margin-top: 0 !important;         /* kill UA h1 top margin */
   }
 }
