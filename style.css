@@ -1388,7 +1388,7 @@ footer p {
   /* trim the helper line and h1 default top margin */
   #about .section__text__p1 {
     margin-top: 0 !important;
-    margin-bottom: 0.20rem !important; /* small gap above the title */
+    margin-bottom: 0.15rem !important; /* small gap above the title */
   }
   #about .title {
     margin-top: 0 !important;
