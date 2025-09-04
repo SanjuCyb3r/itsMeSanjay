@@ -1149,7 +1149,7 @@ footer p {
 
 /* Extra space between About paragraphs (looks like an empty line) */
 #about .about-card .text-container p {
-  margin: 0 0 0.25rem;   /* bottom gap = ~one line; tweak 1rem–1.5rem */
+  margin: 0 0 0.5rem;   /* bottom gap = ~one line; tweak 1rem–1.5rem */
 }
 
 #about .about-card .text-container p:last-child {
