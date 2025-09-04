@@ -1369,7 +1369,7 @@ footer p {
 
 /* Desktop/tablet: tighten space between #profile and #about only */
 @media (min-width: 1025px) {
-  #profile { margin-bottom: 2rem !important; } /* was 6rem; tweak as you like */
+  #profile { margin-bottom: -5rem !important; } /* was 6rem; tweak as you like */
   #about   { margin-top: 0 !important; }      /* remove any extra top offset */
 }
 
