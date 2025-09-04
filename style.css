@@ -1378,19 +1378,20 @@ footer p {
 
 
 
-/* Desktop: put the About title at the top; keep cards where they are */
+/* Desktop: put the About title at the top; keep cards where they are 
 @media (min-width: 769px) {
-  /* remove section padding that was pushing the heading down */
+  /* remove section padding that was pushing the heading down 
   #about { 
     padding-top: 0 !important;
   }
 
-  /* trim the helper line and h1 default top margin */
+  /* trim the helper line and h1 default top margin 
   #about .section__text__p1 {
     margin-top: 0 !important;
-    margin-bottom: 0.5rem !important; /* small gap above the title */
+    margin-bottom: 0.5rem !important; /* small gap above the title 
   }
   #about .title {
-    margin-top: 0 !important;         /* kill UA h1 top margin */
+    margin-top: 0 !important;         /* kill UA h1 top margin 
   }
 }
+*/
